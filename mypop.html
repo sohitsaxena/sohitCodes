@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<head>
+  
+  
+  <style>
+  .modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 164px;
+    left: 464px;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+  }
+
+  .modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+  }
+
+  .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .close:hover { background: #00d9ff; }
+  </style>
+</head>
+
+<body>
+
+<a href="#openModal">Open Modal</a>
+
+<div id="openModal" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>UPDATE ME!!!..</h2>
+    <form>
+    <fieldset>
+      <label for="name">Name</label><br>
+      <input type="text" name="name" id="name" value="" ><br>
+      <label for="city">City</label><br>
+      <input type="text" name="city" id="city" value="" ></br>
+      <label for="email">Email</label></br>
+
+      <input type="text" name="email" id="email" value=""><BR>
+      <button id="put-button">EDIT</button>
+    </fieldset>
+  </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>
